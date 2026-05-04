@@ -6,6 +6,7 @@ import HeroBanner from "@/components/HeroBanner";
 import ProductCard from "@/components/ProductCard";
 import FilterBar from "@/components/FilterBar";
 import CartDrawer from "@/components/CartDrawer";
+import SquadBadge from "@/components/squad/SquadBadge";
 
 export default function Home() {
   const [selectedLeague, setSelectedLeague] = useState("Todos");
@@ -21,9 +22,20 @@ export default function Home() {
       <HeroBanner />
 
       <main id="produtos" className="max-w-6xl mx-auto px-4 py-12">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-3xl font-bold text-gray-900">Nossos Produtos</h2>
-          <span className="text-gray-500">{filteredProducts.length} produtos</span>
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900">Nossos Produtos</h2>
+            <span className="text-gray-500">{filteredProducts.length} produtos</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <SquadBadge />
+            <a
+              href="/squads"
+              className="text-sm text-gray-600 hover:text-gray-900 underline"
+            >
+              Alterar squad
+            </a>
+          </div>
         </div>
 
         <FilterBar selectedLeague={selectedLeague} onLeagueChange={setSelectedLeague} />
