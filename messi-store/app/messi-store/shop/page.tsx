@@ -1,12 +1,12 @@
 "use client";
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProductCard from "@/components/ProductCard";
 import { products, categories } from "@/lib/products";
 import { Product } from "@/lib/products";
 import { useSearchParams, useRouter } from "next/navigation";
 
-export default function ShopPage() {
+function ShopContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [category, setCategory] = useState(searchParams.get("category") || "all");
@@ -126,5 +126,17 @@ export default function ShopPage() {
         )}
       </div>
     </div>
+  );
+}
+
+export default function ShopPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-[#0a0a12] pt-28 flex items-center justify-center">
+        <div className="text-white text-xl">Carregando...</div>
+      </div>
+    }>
+      <ShopContent />
+    </Suspense>
   );
 }
