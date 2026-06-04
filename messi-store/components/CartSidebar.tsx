@@ -1,6 +1,6 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
-import { useCart } from "@/messi-store/lib/cart-context";
+import { useCart } from "@/lib/cart-context";
 import Image from "next/image";
 
 export default function CartSidebar({
