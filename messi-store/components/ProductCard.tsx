@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { Product } from "@/messi-store/lib/products";
+import { Product } from "@/lib/products";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (

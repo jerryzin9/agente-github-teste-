@@ -1,8 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import ProductCard from "@/messi-store/components/ProductCard";
-import { products, categories, getFeaturedProducts } from "@/messi-store/lib/products";
+import ProductCard from "@/components/ProductCard";
+import { products, categories, getFeaturedProducts } from "@/lib/products";
 
 export default function MessiStoreHome() {
   const featured = getFeaturedProducts();

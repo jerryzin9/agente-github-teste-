@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { CartProvider } from "@/messi-store/lib/cart-context";
+import { CartProvider } from "@/lib/cart-context";
 import Header from "@/messi-store/components/Header";
-import "../globals.css";
+import "../../globals.css";
 
 export const metadata: Metadata = {
   title: "Messi Store — Official Collection",

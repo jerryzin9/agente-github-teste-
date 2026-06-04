@@ -1,9 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import ProductCard from "@/messi-store/components/ProductCard";
-import { products, categories } from "@/messi-store/lib/products";
-import { Product } from "@/messi-store/lib/products";
+import ProductCard from "@/components/ProductCard";
+import { products, categories } from "@/lib/products";
+import { Product } from "@/lib/products";
 
 export default function ShopPage() {
   const [category, setCategory] = useState("all");

@@ -2,10 +2,10 @@
 import { useState, use } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { getProductBySlug, products } from "@/messi-store/lib/products";
-import { useCart } from "@/messi-store/lib/cart-context";
-import Toast from "@/messi-store/components/Toast";
-import ProductCard from "@/messi-store/components/ProductCard";
+import { getProductBySlug, products } from "@/lib/products";
+import { useCart } from "@/lib/cart-context";
+import Toast from "@/components/Toast";
+import ProductCard from "@/components/ProductCard";
 import Link from "next/link";
 
 export default function ProductPage({
